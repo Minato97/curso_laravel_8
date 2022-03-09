@@ -8,10 +8,18 @@
     <title>@yield('title')</title>
     <!-- favicom-->
     <!--estilos -->
+    <style>
+        .active{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <!--header-->
 <!--nav-->
+    @include('layouts.partials.header')
+    @include('layouts.partials.footer')
 @yield('content')
 
 <!--footer-->
