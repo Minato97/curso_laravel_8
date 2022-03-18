@@ -8,6 +8,7 @@
             {{--@dump(request()->routeIs('cursos.index'))--}}
             <li><a href="{{route('nosotros')}}"class="{{request()->routeIs('nosotros') ? 'active': ''}}">Nosotros</a></li>
             {{--dump(request()->routeIs('nosotros') )--}}
+            <li><a href="{{route('contactanos.index')}}">Contactanos</a></li>
         </ul>
     </nav>
 </header>
