@@ -22,9 +22,9 @@ Route::get('/', HomeControler::class)->name('home');
 
 Route::resource('asignaturas',CursoController::class)->parameters(['asignaturas'=>'curso'])->names('cursos');
 Route::view('nosotros','nosotros')->name('nosotros');
-Route::get('contactanos', function (){
+Route::get('contactanos.index', function (){
     $correo = new ContactanosMailable;
     Mail::to('ignacio.andrade8033@alumnos.udg.mx')->send($correo);
 
     return "Mensaje enviado";
-});
+})->name('contactanos');
